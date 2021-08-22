@@ -2,7 +2,7 @@ import psycopg2
 import config
 
 def search_by_full_link(full_link):
-    conn = psycopg2.connect(config.host, config.database, config.user, config.password)
+    conn = psycopg2.connect(host = config.host, database = config.database, user = config.user, password = config.password)
     cur = conn.cursor()
     cur.execute("SELECT short_link FROM LINKS WHERE full_link in (%s);", (full_link,))
 
@@ -20,7 +20,7 @@ def search_by_full_link(full_link):
         return short_link
 
 def search_by_short_link(short_link):
-    conn = psycopg2.connect(config.host, config.database, config.user, config.password)
+    conn = psycopg2.connect(host = config.host, database = config.database, user = config.user, password = config.password)
 
     cur = conn.cursor()
 

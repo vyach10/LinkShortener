@@ -2,7 +2,7 @@ import psycopg2
 import config
 
 def create_table():
-    conn = psycopg2.connect(config.host, config.database, config.user, config.password)
+    conn = psycopg2.connect(host = config.host, database = config.database, user = config.user, password = config.password)
 
     cur = conn.cursor()
 
