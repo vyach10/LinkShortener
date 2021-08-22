@@ -1,0 +1,9 @@
+/.DS_Store
+/.idea
+/__pycache__
+/config.py
+/postgres_connection.py
+/python_interface.py
+/static
+/templates
+/venv
